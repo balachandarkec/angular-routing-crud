@@ -1,0 +1,29 @@
+<p>create-employee works!</p>
+
+<div [hidden]="submitted" style="width: 400px;">
+
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group">
+            <label for="name">Enter the Name</label>
+             <input type="text" id="name" name="name" required [(ngModel)]="employee.name" />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Enter the Name</label>
+             <input type="text" id="email" name="email" required [(ngModel)]="employee.email" />
+        </div>
+
+      <button type="submit" class="btn btn-success">submit</button>
+
+    </form>
+
+</div>
+
+<div [hidden]="!submitted">
+  
+    <h4>You have Submitted Success Fully</h4> 
+
+
+    <button (click)="newEmployee()"> ADD More Employee</button>
+</div>

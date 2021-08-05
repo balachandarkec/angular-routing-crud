@@ -1,0 +1,23 @@
+<p>employee-list works!</p>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Employee Details</h2>
+
+    </div>
+
+    <div class="panel-body">
+        <ul>
+            <li *ngFor= "let employee of employees | async">
+                <div> <span>{{employee.name}}</span> <span>{{employee.email}}</span>
+                 <span><button (click)="deleteEmployee(employee.id)" class="btn btn-warning">delete</button></span>
+                 <span><button (click)="emloyeeDetails(employee.id)" class="btn btn-primary">Details</button></span>
+                
+                </div>
+            </li>
+        </ul>
+        
+    </div>
+
+</div>
